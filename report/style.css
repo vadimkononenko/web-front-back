@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 30px 80px;
+}
+
+.header p {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.selfies {
+    position: absolute;
+    top: 0;
+    right: 70px;
+}
+
+.selfies img {
+    padding: 5px;
+    margin: 20px 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+}
+
+.main {
+    margin-top: 40px;
+}
+
+.info {
+    text-align: center;
+}
+
+.info .team {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.info .team span:hover {
+    cursor: pointer;
+    color: #45BE00;
+}
+
+.labs {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lab {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 15px 10px;
+    margin: 5px;
+}
+
+.lab:hover {
+    background-color: #E6E6E6;
+    cursor: pointer;
+}
+
+.current-lab-info {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 0.8fr 2.2fr;
+}
+
+.lab-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.lab-nav .chapter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 5px 5px;
+    height: 70px;
+    padding: 0 15px;
+
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.lab-out {
+    margin: 5px 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
