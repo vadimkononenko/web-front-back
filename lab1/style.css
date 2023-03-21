@@ -2,110 +2,131 @@
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Убираем внутренние отступы */
-ul, ol {
-    padding: 0;
+ul,
+ol {
+  padding: 0;
 }
 
 /* Убираем внешние отступы */
-body, h1, h2, h3, h4, p, ul, ol, li, figure, figcaption, blockquote, dl, dd {
-    margin: 0;
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
 }
 
 /* Выставляем основные настройки по-умолчанию для body */
 body {
-    min-height: 100vh;
-    scroll-behavior: smooth;
-    text-rendering: optimizeSpeed;
-    line-height: 1.5;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
 }
 
 /* Упрощаем работу с изображениями */
 img {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
+  display: block;
 }
 
 /* Наследуем шрифты для инпутов и кнопок */
-input, button, textarea, select {
-    font: inherit;
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
 /* Убираем стиль для a тега */
-a, a:hover, a:focus, a:active {
-    text-decoration: none;
-    color: inherit;
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
 }
 
-
 .container {
-    margin: 20px 50px;
+  margin: 20px 50px;
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .navigation ul {
-    display: flex;
-    list-style: none;
+  display: flex;
+  list-style: none;
 }
 
 .navigation ul li {
-    margin: 5px 10px;
+  margin: 5px 10px;
 }
 
 .main {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .people-images {
-    margin-top: 20px;
-    display: flex;
-    justify-content: flex-start;
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .people-images .person img {
-    width: 150px;
-    height: 200px;
-    border-radius: 15px;
-    border: 2px solid ;
+  width: 150px;
+  height: 200px;
+  border-radius: 15px;
+  border: 2px solid;
 }
 
 .people-images .person:not(:last-child) {
-    margin-right: 30px;
+  margin-right: 30px;
 }
 
 .description-info {
-    margin-top: 40px;
-    margin-left: 20px;
-    display: flex;
-    align-items: flex-start;
+  margin-top: 40px;
+  margin-left: 20px;
+  display: flex;
+  align-items: flex-start;
 }
 
 .description-info ol {
-    margin-right: 40px;
+  margin-right: 40px;
 }
 
 .description-info ol li {
-    font-size: 18px;
+  font-size: 18px;
 }
 
-.description-info table, th, td {
-    text-align: center;
-    border: 1px solid black;
-    border-collapse: collapse;
+.description-info table,
+th,
+td {
+  text-align: center;
+  border: 1px solid black;
+  border-collapse: collapse;
 }
 
 .description-info table th {
-    width: 120px;
+  width: 120px;
 }
 
 .description-info table tr {
-    height: 40px;
+  height: 40px;
 }
