@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
     <title>Start wars guide</title>
 </head>
 <body>
@@ -11,66 +12,98 @@
         <div class="logo">
             <h1>StartWarsGuide</h1>
         </div>
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">People</a>
+                </li>
+                <li>
+                    <a href="#">Starships</a>
+                </li>
+                <li>
+                    <a href="#">Vehicles</a>
+                </li>
+                <li>
+                    <a href="#">Planets</a>
+                </li>
+                <li>
+                    <a href="subject_description.html">Предметна галузь</a>
+                </li>
+            </ul>
+        </div>
     </div>
 
     <div class="main">
-        <p>
-            <a href="subject_description.html">Опис предметної галузі</a>
-        </p>
         <div class="people">
-            <h3>People</h3>
-            <div class="tables">
+            <h2>People</h2>
+
+            <div class="people-images">
+                <div class="person">
+                    <img src="assets/people/LukeSkywalker.jpeg" alt="LukeSkywalker">
+                </div>
+                <div class="person">
+                    <img src="assets/people/C-3PO.jpeg" alt="C-3PO">
+                </div>
+                <div class="person">
+                    <img src="assets/people/DartVader.jpg" alt="DartVader">
+                </div>
+                <div class="person">
+                    <img src="assets/people/Obi-WanKenobi.jpg" alt="Obi-WanKenobi">
+                </div>
+            </div>
+
+            <div class="description-info">
+                <ol>
+                    <li>Luke Skywalker</li>
+                    <li>C-3PO</li>
+                    <li>Dart Vader</li>
+                    <li>Obi-WanKenobi</li>
+                </ol>
+
                 <table>
                     <tr>
-                        <th>Name</th>
+                        <th>№</th>
                         <th>Gender</th>
-                        <th>Birth year</th>
-                        <th>Homeworld</th>
+                        <th>Home planet</th>
                     </tr>
                     <tr>
-                        <th>Luke Skywalker</th>
-                        <th>Male</th>
-                        <th>19BBY</th>
-                        <th>Tatooine</th>
+                        <td>1</td>
+                        <td>Male</td>
+                        <td>Tatooine</td>
                     </tr>
                     <tr>
-                        <th>C-3PO</th>
-                        <th>N/A</th>
-                        <th>112BBY</th>
-                        <th>Tatooine</th>
+                        <td>2</td>
+                        <td>N/A</td>
+                        <td>Tatooine</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Male</td>
+                        <td>Tatooine</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Male</td>
+                        <td>Stewjon</td>
                     </tr>
                 </table>
             </div>
-            <div class="images">
-                <img src="assets/LukeSkywalker.jpeg" alt="Luke Skywalker">
-                <p>Luke Skywalker</p>
-                <img src="assets/C-3PO.jpeg" alt="C-3PO">
-                <p>C-3PO</p>
-            </div>
-            <div class="lists">
-                <h3>List of characters</h3>
-                <ul>
-                    <li>Luke Skywalker</li>
-                    <li>C-3PO</li>
-                    <li>R2-D2</li>
-                    <li>Darth Vader</li>
-                    <li>Leia Organa</li>
-                    <li>Owen Lars</li>
-                    <li>Beru Whitesun lars</li>
-                    <li>R5-D4</li>
-                    <li>Biggs Darklighter</li>
-                    <li>Obi-Wan Kenobi</li>
-                    <li>Anakin Skywalker</li>
-                </ul>
-            </div>
-            <div class="forms">
-                <form action="#">
-                    <label for="char_name">Character name:</label> <br>
-                    <input type="text" id="char_name" name="char_name"> <br>
-                    <label for="char_homeworld">Character homeworld:</label> <br>
-                    <input type="text" id="char_homeworld" name="char-homeworld"> <br>
-                </form>
-            </div>
+        </div>
+
+        <div class="starships">
+
+        </div>
+
+        <div class="vehicles">
+
+        </div>
+
+        <div class="planets">
+
+        </div>
+
+        <div>
+            <!--for form-->
         </div>
     </div>
 </div>
