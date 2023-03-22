@@ -83,20 +83,20 @@ a:active {
   margin-top: 50px;
 }
 
-.people-images {
+.cards {
   margin-top: 20px;
   display: flex;
   justify-content: flex-start;
 }
 
-.people-images .person img {
+.cards .card img {
   width: 150px;
   height: 200px;
   border-radius: 15px;
   border: 2px solid;
 }
 
-.people-images .person:not(:last-child) {
+.cards .card:not(:last-child) {
   margin-right: 30px;
 }
 
