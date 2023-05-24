@@ -19,7 +19,7 @@
     <div class="selfies">
         <img src="assets/KV.jpg" alt="Кононенко Вадим">
         <img src="assets/KK.jpg" alt="Комісар Кіріл">
-        <img src="assets/third.jpeg" alt="Рогозний Олексій">
+        <img src="assets/RO.png" alt="Рогозний Олексій">
     </div>
 
     <div class="main">
@@ -34,13 +34,13 @@
             </div>
 
             <div class="labs">
-                <div class="lab" onclick="updateInfo('Дані 1')">
+                <div class="lab" onclick="updateInfo(1)">
                     <p>Лабораторна робота №1</p>
                 </div>
-                <div class="lab" onclick="updateInfo('Дані 2')">
+                <div class="lab" onclick="updateInfo(2)">
                     <p>Лабораторна робота №2</p>
                 </div>
-                <div class="lab" onclick="updateInfo('Дані 3')">
+                <div class="lab">
                     <p>Лабораторна робота №3</p>
                 </div>
                 <div class="lab">
@@ -64,37 +64,13 @@
             </div>
 
             <div class="current-lab-info">
-                <div class="lab-nav">
-                    <div class="chapter">
-                        <p>Тема, мета, ЛР №1 Місце розташування сайту, звіту</p>
-                    </div>
-                    <div class="chapter">
-                        <p>Опис предметного середовища</p>
-                    </div>
-                    <div class="chapter">
-                        <p>HTML-код головної сторінки WEB-застосунку</p>
-                    </div>
-                    <div class="chapter">
-                        <p>Зовнішній вигляд головної сторінки WEB-застосунку</p>
-                    </div>
-                    <div class="chapter">
-                        <p>ВИСНОВКИ до ЛР №1</p>
-                    </div>
-                    <div class="chapter">
-                        <p>ВИКОНАВЦІ</p>
-                    </div>
-                </div>
+                <div class="lab-nav" id="lab-nav-view"></div>
 
-                <div class="lab-out"></div>
+                <div class="lab-out make-center" id="place-out"></div>
             </div>
         </div>
     </div>
 </div>
-<script>
-    function updateInfo(data) {
-        let infoDiv = document.querySelector(".lab-out");
-        infoDiv.innerHTML = data;
-    }
-</script>
+<script src="script.js"></script>
 </body>
 </html>

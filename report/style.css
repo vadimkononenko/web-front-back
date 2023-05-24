@@ -86,7 +86,7 @@ body {
     align-items: center;
 
     margin: 5px 5px;
-    height: 77px;
+    height: 90px;
     padding: 0 15px;
 
     border: 1px solid #dfce0d;
@@ -102,6 +102,12 @@ body {
     border: 3px solid #dfce0d;
     border-radius: 10px;
     color: white;
-    font-size: 30px;
+    font-size: 18px;
     font-weight: bold;
+}
+
+.make-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
