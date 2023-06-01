@@ -111,3 +111,20 @@ body {
     flex-direction: column;
     justify-content: center;
 }
+
+.inner-chapter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 5px 5px 5px 70px;
+    height: 90px;
+    padding: 0 15px;
+
+    border: 1px solid #dfce0d;
+    border-radius: 10px;
+}
+
+.inner-chapter:hover {
+    box-shadow: -7px 5px 6px #9b8c20;
+}

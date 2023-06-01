@@ -36,28 +36,33 @@ export function setupSecondLabView() {
 
   let selectorsDiv = document.createElement("div");
   selectorsDiv.classList.add("chapter");
+  selectorsDiv.classList.add("without-shadow");
   selectorsDiv.innerHTML = "СЕЛЕКТОРИ:";
-  //   selectorsDiv.addEventListener("click", showTagSelectors);
 
   let tagSelectorsDiv = document.createElement("div");
-  tagSelectorsDiv.classList.add("chapter");
+  tagSelectorsDiv.classList.add("inner-chapter");
   tagSelectorsDiv.innerHTML = "Селектори тегу";
   tagSelectorsDiv.addEventListener("click", showTagSelectors);
 
   let classSelectorsDiv = document.createElement("div");
-  classSelectorsDiv.classList.add("chapter");
+  classSelectorsDiv.classList.add("inner-chapter");
   classSelectorsDiv.innerHTML = "Селектори класу";
   classSelectorsDiv.addEventListener("click", showClassSelectors);
 
   let idSelectorsDiv = document.createElement("div");
-  idSelectorsDiv.classList.add("chapter");
+  idSelectorsDiv.classList.add("inner-chapter");
   idSelectorsDiv.innerHTML = "Селектори ідентифікаторів";
   idSelectorsDiv.addEventListener("click", showIdSelectors);
 
   let otherSelectorsDiv = document.createElement("div");
-  otherSelectorsDiv.classList.add("chapter");
+  otherSelectorsDiv.classList.add("inner-chapter");
   otherSelectorsDiv.innerHTML = "Інші селектори";
   otherSelectorsDiv.addEventListener("click", showOtherSelectors);
+
+  selectorsDiv.appendChild(tagSelectorsDiv);
+  selectorsDiv.appendChild(classSelectorsDiv);
+  selectorsDiv.appendChild(idSelectorsDiv);
+  selectorsDiv.appendChild(otherSelectorsDiv);
 
   let cssInfoDiv = document.createElement("div");
   cssInfoDiv.classList.add("chapter");
@@ -189,7 +194,7 @@ export function showCssInfo() {
   let contentDiv = document.createElement("div");
   contentDiv.style.paddingTop = "20px";
   contentDiv.style.paddingBottom = "10px";
-  contentDiv.style.maxHeight = "975px";
+  contentDiv.style.height = "800px";
   contentDiv.style.overflowX = "auto";
   contentDiv.style.overflowY = "auto";
 
