@@ -32,15 +32,15 @@ dd {
 }
 
 /* Выставляем основные настройки по-умолчанию для body */
+/* Шрифти, фон, колір тексту */
 body {
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
+  height: 100vh;
   line-height: 1.5;
 
   /*color scheme*/
   background-color: #1a1a1a;
   color: white;
+  font-family: sans-serif;
 }
 
 /* Упрощаем работу с изображениями */
@@ -64,7 +64,6 @@ a:active {
   text-decoration: none;
   color: inherit;
 }
-
 
 .container {
   margin: 20px 50px;
@@ -107,13 +106,13 @@ a:active {
   display: flex;
   justify-content: flex-start;
 }
-
+/* Контури */
 .cards .card img {
   width: 150px;
   height: 200px;
   border-radius: 15px;
 }
-
+/* CSS просунутий */
 .cards .card img:hover {
   scale: 1.1;
   box-shadow: 0 0 10px 0 #dfce0d, 0 0 10px 0 #dfce0d;
@@ -129,7 +128,7 @@ a:active {
   display: flex;
   align-items: flex-start;
 }
-
+/* CSS для таблиць та багаторівневих списків */
 .description-info ol {
   margin-right: 100px;
 }

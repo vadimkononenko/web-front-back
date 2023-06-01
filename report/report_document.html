@@ -1,76 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Звітний HTML-документ</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<div class="container">
-    <div class="header">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
         <p>
-            ЗВІТИ ЛАБОРАТОРНИХ РОБІТ <br>
-            З ДИСЦИПЛІНИ "WEB-ОРІЄНТОВАНІ ТЕХНОЛОГІЇ. <br>
-            ОСНОВИ FRONTEND ТА BACKEND РОЗРОБОК"
+          ЗВІТИ ЛАБОРАТОРНИХ РОБІТ <br />
+          З ДИСЦИПЛІНИ "WEB-ОРІЄНТОВАНІ ТЕХНОЛОГІЇ. <br />
+          ОСНОВИ FRONTEND ТА BACKEND РОЗРОБОК"
         </p>
-    </div>
+      </div>
 
-    <div class="selfies">
-        <img src="assets/KV.jpg" alt="Кононенко Вадим">
-        <img src="assets/KK.jpg" alt="Комісар Кіріл">
-        <img src="assets/RO.png" alt="Рогозний Олексій">
-    </div>
+      <div class="selfies">
+        <img src="assets/KV.jpg" alt="Кононенко Вадим" />
+        <img src="assets/KK.jpg" alt="Комісар Кіріл" />
+        <img src="assets/RO.png" alt="Рогозний Олексій" />
+      </div>
 
-    <div class="main">
+      <div class="main">
         <div class="info">
-            <div class="team">
-                <p>БРИГАДА №4</p>
-                <p>Студенти:
-                    гр. ІП-05 <span class="teammate">Кононенко Вадим Олександрович,</span>
-                    гр. ІП-05 <span class="teammate">Комісар Кіріл Сергійович,</span>
-                    гр. ІП-05 <span class="teammate"> Рогозний Олексій Вʼячеславович</span>
-                </p>
-            </div>
+          <div class="team">
+            <p>БРИГАДА №4</p>
+            <p>
+              Студенти: гр. ІП-05
+              <span class="teammate">Кононенко Вадим Олександрович,</span> гр.
+              ІП-05 <span class="teammate">Комісар Кіріл Сергійович,</span> гр.
+              ІП-05
+              <span class="teammate"> Рогозний Олексій Вʼячеславович</span>
+            </p>
+          </div>
 
-            <div class="labs">
-                <div class="lab" onclick="updateInfo(1)">
-                    <p>Лабораторна робота №1</p>
-                </div>
-                <div class="lab" onclick="updateInfo(2)">
-                    <p>Лабораторна робота №2</p>
-                </div>
-                <div class="lab">
-                    <p>Лабораторна робота №3</p>
-                </div>
-                <div class="lab">
-                    <p>Лабораторна робота №4</p>
-                </div>
-                <div class="lab">
-                    <p>Лабораторна робота №5</p>
-                </div>
-                <div class="lab">
-                    <p>Лабораторна робота №6</p>
-                </div>
-                <div class="lab">
-                    <p>Лабораторна робота №7</p>
-                </div>
-                <div class="lab">
-                    <p>Лабораторна робота №8</p>
-                </div>
-                <div class="lab">
-                    <p>Лабораторна робота №9</p>
-                </div>
+          <div class="labs">
+            <div class="lab" onclick="updateInfo(1)">
+              <p>Лабораторна робота №1</p>
             </div>
-
-            <div class="current-lab-info">
-                <div class="lab-nav" id="lab-nav-view"></div>
-
-                <div class="lab-out make-center" id="place-out"></div>
+            <div class="lab" onclick="updateInfo(2)">
+              <p>Лабораторна робота №2</p>
             </div>
+            <div class="lab">
+              <p>Лабораторна робота №3</p>
+            </div>
+            <div class="lab">
+              <p>Лабораторна робота №4</p>
+            </div>
+            <div class="lab">
+              <p>Лабораторна робота №5</p>
+            </div>
+            <div class="lab">
+              <p>Лабораторна робота №6</p>
+            </div>
+            <div class="lab">
+              <p>Лабораторна робота №7</p>
+            </div>
+            <div class="lab">
+              <p>Лабораторна робота №8</p>
+            </div>
+            <div class="lab">
+              <p>Лабораторна робота №9</p>
+            </div>
+          </div>
+
+          <div class="current-lab-info">
+            <div class="lab-nav" id="lab-nav-view"></div>
+
+            <div class="lab-out make-center" id="place-out"></div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-<script src="script.js"></script>
-</body>
+    <script type="module" src="script.js"></script>
+  </body>
 </html>
