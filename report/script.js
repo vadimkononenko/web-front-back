@@ -4,10 +4,15 @@ import * as lab2 from "./lab2script.js";
 // завантажуємо відображенння навішації для першої лаби
 document.addEventListener("DOMContentLoaded", lab1.setupFirstLabView);
 
-function updateInfo(modelNumber) {
-  if (modelNumber === 1) {
-    lab1.setupFirstLabView();
-  } else if (modelNumber === 2) {
-    lab2.setupSecondLabView();
-  }
-}
+const laba1 = document.getElementById("laba1");
+laba1.onclick = lab1.setupFirstLabView;
+const laba2 = document.getElementById("laba2");
+laba2.onclick = lab2.setupSecondLabView;
+
+// function updateInfo(modelNumber) {
+//   if (modelNumber === 1) {
+//     lab1.setupFirstLabView();
+//   } else if (modelNumber === 2) {
+//     lab2.setupSecondLabView();
+//   }
+// }

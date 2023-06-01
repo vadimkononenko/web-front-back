@@ -36,7 +36,7 @@ export function setupSecondLabView() {
 
   let selectorsDiv = document.createElement("div");
   selectorsDiv.classList.add("chapter");
-  selectorsDiv.innerHTML = "СЕЛЕКТОРИ";
+  selectorsDiv.innerHTML = "СЕЛЕКТОРИ:";
   //   selectorsDiv.addEventListener("click", showTagSelectors);
 
   let tagSelectorsDiv = document.createElement("div");
@@ -79,6 +79,7 @@ export function setupSecondLabView() {
   labNavView.appendChild(otherSelectorsDiv);
   labNavView.appendChild(cssInfoDiv);
   labNavView.appendChild(conclusionDiv);
+  showTopicAndGoalInfo();
 }
 
 export function showTopicAndGoalInfo() {
