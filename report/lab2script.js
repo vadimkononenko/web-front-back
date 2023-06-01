@@ -4,7 +4,7 @@ export const lab2Info = {
   goal:
     "Мета: придбати практичні навички роботи з селекторами, ідентифікаторами, списками, різноманітними властивостями кольору і фону, " +
     "зовнішними тавнутрішними відступами, плаваючими елементами, оформленням текстовихелементів",
-  style_methods: "",
+  style_methods: "./assets/lab2/styleMethods.png",
   selectors: {
     tag_selector: "./assets/lab2/tag_selector.png",
     class_selector: "./assets/lab2/class_selector.png",
@@ -105,10 +105,19 @@ export function showTopicAndGoalInfo() {
 export function showStyleMethods() {
   placeOut.textContent = "";
 
-  let p = document.createElement("p");
-  p.textContent = lab2Info.style_methods;
+  let contentDiv = document.createElement("div");
+  contentDiv.style.paddingTop = "20px";
+  contentDiv.style.paddingBottom = "10px";
+  contentDiv.style.maxHeight = "580px";
+  contentDiv.style.overflowX = "auto";
+  contentDiv.style.overflowY = "auto";
 
-  placeOut.appendChild(p);
+  let img = document.createElement("img");
+  img.src = lab2Info.style_methods;
+  img.style.width = "1000px";
+  img.style.objectFit = "scale-down";
+
+  placeOut.appendChild(contentDiv).appendChild(img);
 }
 
 export function showTagSelectors() {
