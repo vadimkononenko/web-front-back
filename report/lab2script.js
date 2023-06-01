@@ -131,7 +131,7 @@ export function showTagSelectors() {
   contentDiv.style.overflowY = "auto";
 
   let img = document.createElement("img");
-  img.src = "assets/lab2/tag_selector.png";
+  img.src = lab2Info.selectors.tag_selector;
   img.style.width = "1000px";
   img.style.objectFit = "scale-down";
 
@@ -149,7 +149,7 @@ export function showClassSelectors() {
   contentDiv.style.overflowY = "auto";
 
   let img = document.createElement("img");
-  img.src = "assets/lab2/class_selector.png";
+  img.src = lab2Info.selectors.class_selector;
   img.style.width = "1000px";
   img.style.objectFit = "scale-down";
 
@@ -167,7 +167,7 @@ export function showIdSelectors() {
   contentDiv.style.overflowY = "auto";
 
   let img = document.createElement("img");
-  img.src = "assets/lab2/id_selector.png";
+  img.src = lab2Info.selectors.id_selector;
   img.style.width = "1000px";
   img.style.objectFit = "scale-down";
 
@@ -185,7 +185,7 @@ export function showOtherSelectors() {
   contentDiv.style.overflowY = "auto";
 
   let img = document.createElement("img");
-  img.src = "assets/lab2/other_selector.png";
+  img.src = lab2Info.selectors.other_selector;
   img.style.width = "1000px";
   img.style.objectFit = "scale-down";
 
@@ -203,7 +203,7 @@ export function showCssInfo() {
   contentDiv.style.overflowY = "auto";
 
   let img = document.createElement("img");
-  img.src = "assets/lab2/css_info.png";
+  img.src = lab2Info.css_info;
   img.style.width = "1000px";
   img.style.objectFit = "scale-down";
 
