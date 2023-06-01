@@ -21,6 +21,8 @@ export const lab1Info = {
     "Виконали роботу: Кононенко Вадим ІП-05, Комісар Кіріл ІП-05, Рогозний Олексій ІП-05",
 };
 
+const placeOut = document.getElementById("place-out");
+
 export function setupFirstLabView() {
   let labNavView = document.getElementById("lab-nav-view");
 
@@ -69,7 +71,6 @@ export function setupFirstLabView() {
 }
 
 export function showTopicAndGoalInfo() {
-  let placeOut = document.getElementById("place-out");
   placeOut.textContent = "";
 
   let topic = document.createElement("p");
@@ -83,7 +84,6 @@ export function showTopicAndGoalInfo() {
 }
 
 export function showDescribingInfo() {
-  let placeOut = document.getElementById("place-out");
   placeOut.textContent = "";
 
   let p = document.createElement("p");
@@ -93,7 +93,6 @@ export function showDescribingInfo() {
 }
 
 export function showCode() {
-  let placeOut = document.getElementById("place-out");
   placeOut.textContent = "";
 
   let contentDiv = document.createElement("div");
@@ -112,7 +111,6 @@ export function showCode() {
 }
 
 export function showAppearanceOfLab() {
-  let placeOut = document.getElementById("place-out");
   placeOut.textContent = "";
 
   let contentDiv = document.createElement("div");
@@ -129,7 +127,6 @@ export function showAppearanceOfLab() {
 }
 
 export function showConclusion() {
-  let placeOut = document.getElementById("place-out");
   placeOut.textContent = "";
 
   let p = document.createElement("p");
@@ -140,7 +137,6 @@ export function showConclusion() {
 }
 
 export function showWorkers() {
-  let placeOut = document.getElementById("place-out");
   placeOut.textContent = "";
 
   let p = document.createElement("p");

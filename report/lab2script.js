@@ -16,6 +16,8 @@ export const lab2Info = {
     "Висновки роботи: виконуючи лабораторну роботу 2 ми навчилися працювати з селекторами, списками, ідентифікаторами, відступами, плаваючими елементами, та покращили навички оформлення текстових елементів",
 };
 
+const placeOut = document.getElementById("place-out");
+
 export function setupSecondLabView() {
   let labNavView = document.getElementById("lab-nav-view");
 
@@ -88,7 +90,6 @@ export function setupSecondLabView() {
 }
 
 export function showTopicAndGoalInfo() {
-  let placeOut = document.getElementById("place-out");
   placeOut.textContent = "";
 
   let topic = document.createElement("p");
@@ -102,7 +103,6 @@ export function showTopicAndGoalInfo() {
 }
 
 export function showStyleMethods() {
-  let placeOut = document.getElementById("place-out");
   placeOut.textContent = "";
 
   let p = document.createElement("p");
@@ -112,7 +112,6 @@ export function showStyleMethods() {
 }
 
 export function showTagSelectors() {
-  let placeOut = document.getElementById("place-out");
   placeOut.textContent = "";
 
   let contentDiv = document.createElement("div");
@@ -131,7 +130,6 @@ export function showTagSelectors() {
 }
 
 export function showClassSelectors() {
-  let placeOut = document.getElementById("place-out");
   placeOut.textContent = "";
 
   let contentDiv = document.createElement("div");
@@ -150,7 +148,6 @@ export function showClassSelectors() {
 }
 
 export function showIdSelectors() {
-  let placeOut = document.getElementById("place-out");
   placeOut.textContent = "";
 
   let contentDiv = document.createElement("div");
@@ -169,7 +166,6 @@ export function showIdSelectors() {
 }
 
 export function showOtherSelectors() {
-  let placeOut = document.getElementById("place-out");
   placeOut.textContent = "";
 
   let contentDiv = document.createElement("div");
@@ -188,7 +184,6 @@ export function showOtherSelectors() {
 }
 
 export function showCssInfo() {
-  let placeOut = document.getElementById("place-out");
   placeOut.textContent = "";
 
   let contentDiv = document.createElement("div");
@@ -207,7 +202,6 @@ export function showCssInfo() {
 }
 
 export function showConclusion() {
-  let placeOut = document.getElementById("place-out");
   placeOut.textContent = "";
 
   let p = document.createElement("p");
