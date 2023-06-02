@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style_AR.css" />
+    <title>Рогозний Олексій ІП-05</title>
+  </head>
+  <body>
+    <h1>Гістограма. Варіант 7 (17 у списку групи)</h1>
+    <div class="histogram-container" id="histogram">
+      <div class="axis-x">
+        <span>0</span>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span>10</span>
+      </div>
+      <div class="axis-y">
+        <span>10</span>
+        <span>9</span>
+        <span>8</span>
+        <span>7</span>
+        <span>6</span>
+        <span>5</span>
+        <span>4</span>
+        <span>3</span>
+        <span>2</span>
+        <span>1</span>
+        <span>0</span>
+      </div>
+    </div>
+
+    <div class="form-container">
+      <form id="inputForm">
+        <label for="value">Значення:</label>
+        <input type="number" id="value" name="value" min="1" />
+        <button type="submit">Додати</button>
+      </form>
+    </div>
+
+    <h1>Завдання з масивами. Варіант 7 (17 у списку групи)</h1>
+    <h2>Вхідний масив:</h2>
+    <table id="inputTable">
+      <thead>
+        <tr>
+          <th>Індекс</th>
+          <th>Значення</th>
+        </tr>
+      </thead>
+      <tbody id="inputTableBody"></tbody>
+    </table>
+
+    <h2>Вихідний масив (упорядкований у порядку зменшення):</h2>
+    <table id="outputTable">
+      <thead>
+        <tr>
+          <th>Індекс</th>
+          <th>Значення</th>
+        </tr>
+      </thead>
+      <tbody id="outputTableBody"></tbody>
+    </table>
+
+    <script src="solver_ar.js"></script>
+  </body>
+</html>
