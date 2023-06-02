@@ -1,4 +1,5 @@
 export const lab1Info = {
+  git_link: "https://github.com/vadimkononenko/web-front-back/tree/main/lab1",
   topic:
     "Тема: СТРУКТУРА HTML-ДОКУМЕНТА. ВИБІР ПРЕДМЕТНОЇ ГАЛУЗІ. СТРУКТУРА HTML-ДОКУМЕНТА. ВИБІР ПРЕДМЕТНОЇ ГАЛУЗІ. HTML-ДОКУМЕНТІ.",
   goal:
@@ -73,13 +74,24 @@ export function setupFirstLabView() {
 export function showTopicAndGoalInfo() {
   placeOut.textContent = "";
 
+  let gitLink = document.createElement("a");
+  gitLink.innerHTML = "Посилання на Github";
+  gitLink.href = lab1Info.git_link;
+  gitLink.classList.add("git-link-appearance");
+
+  let brEl1 = document.createElement("br");
+  let brEl2 = document.createElement("br");
+
   let topic = document.createElement("p");
   topic.textContent = lab1Info.topic;
 
   let goal = document.createElement("p");
   goal.textContent = lab1Info.goal;
 
+  placeOut.appendChild(gitLink);
+  placeOut.appendChild(brEl1);
   placeOut.appendChild(topic);
+  placeOut.appendChild(brEl2);
   placeOut.appendChild(goal);
 }
 

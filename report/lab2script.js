@@ -1,4 +1,5 @@
 export const lab2Info = {
+  git_link: "https://github.com/vadimkononenko/web-front-back/tree/main/lab2",
   topic:
     "Тема: КАСКАДНІ ТАБЛИЦІ СТИЛІВ. СЕЛЕКТОРИ .ІДЕНТИФІКАТОРИ. СТИЛЬОВЕ ОФОРМЛЕННЯ ТЕКСТОВИХ ЕЛЕМЕНТІВ В HTML-ДОКУМЕНТАХ.",
   goal:
@@ -92,13 +93,24 @@ export function setupSecondLabView() {
 export function showTopicAndGoalInfo() {
   placeOut.textContent = "";
 
+  let gitLink = document.createElement("a");
+  gitLink.innerHTML = "Посилання на Github";
+  gitLink.href = lab2Info.git_link;
+  gitLink.classList.add("git-link-appearance");
+
+  let brEl1 = document.createElement("br");
+  let brEl2 = document.createElement("br");
+
   let topic = document.createElement("p");
   topic.textContent = lab2Info.topic;
 
   let goal = document.createElement("p");
   goal.textContent = lab2Info.goal;
 
+  placeOut.appendChild(gitLink);
+  placeOut.appendChild(brEl1);
   placeOut.appendChild(topic);
+  placeOut.appendChild(brEl2);
   placeOut.appendChild(goal);
 }
 

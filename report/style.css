@@ -128,3 +128,11 @@ body {
 .inner-chapter:hover {
     box-shadow: -7px 5px 6px #9b8c20;
 }
+
+.git-link-appearance {
+    color: #dfce0d;
+}
+
+.git-link-appearance:visited {
+    color: #dfce0d;
+}
