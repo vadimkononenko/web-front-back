@@ -1,7 +1,6 @@
 // Гістограма
 const form = document.getElementById("inputForm");
 const histogramContainer = document.getElementById("histogram");
-const axisX = document.querySelector(".axis-x");
 const axisY = document.querySelector(".axis-y");
 let maxValueY = 10;
 
