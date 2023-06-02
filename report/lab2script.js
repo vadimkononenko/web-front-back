@@ -1,5 +1,6 @@
 export const lab2Info = {
-  git_link: "https://github.com/vadimkononenko/web-front-back/tree/main/lab2",
+  git_code_link: "https://github.com/vadimkononenko/web-front-back/tree/main/lab2",
+  git_pages_link: "https://vadimkononenko.github.io/web-front-back/lab2/",
   topic:
     "Тема: КАСКАДНІ ТАБЛИЦІ СТИЛІВ. СЕЛЕКТОРИ .ІДЕНТИФІКАТОРИ. СТИЛЬОВЕ ОФОРМЛЕННЯ ТЕКСТОВИХ ЕЛЕМЕНТІВ В HTML-ДОКУМЕНТАХ.",
   goal:
@@ -93,13 +94,19 @@ export function setupSecondLabView() {
 export function showTopicAndGoalInfo() {
   placeOut.textContent = "";
 
-  let gitLink = document.createElement("a");
-  gitLink.innerHTML = "Посилання на Github";
-  gitLink.href = lab2Info.git_link;
-  gitLink.classList.add("git-link-appearance");
+  let gitCodeLink = document.createElement("a");
+  gitCodeLink.innerHTML = "[code] Посилання на Github";
+  gitCodeLink.href = lab2Info.git_code_link;
+  gitCodeLink.classList.add("git-link-appearance");
+
+  let gitPagesLink = document.createElement("a");
+  gitPagesLink.innerHTML = "[pages] Посилання на Github";
+  gitPagesLink.href = lab2Info.git_pages_link;
+  gitPagesLink.classList.add("git-link-appearance");
 
   let brEl1 = document.createElement("br");
   let brEl2 = document.createElement("br");
+  let brEl3 = document.createElement("br");
 
   let topic = document.createElement("p");
   topic.textContent = lab2Info.topic;
@@ -107,11 +114,13 @@ export function showTopicAndGoalInfo() {
   let goal = document.createElement("p");
   goal.textContent = lab2Info.goal;
 
-  placeOut.appendChild(gitLink);
-  placeOut.appendChild(brEl1);
   placeOut.appendChild(topic);
-  placeOut.appendChild(brEl2);
+  placeOut.appendChild(brEl1);
   placeOut.appendChild(goal);
+  placeOut.appendChild(brEl2);
+  placeOut.appendChild(gitCodeLink);
+  placeOut.appendChild(brEl3);
+  placeOut.appendChild(gitPagesLink);
 }
 
 export function showStyleMethods() {
