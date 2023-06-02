@@ -73,7 +73,7 @@ export function setupFirstLabView() {
 }
 
 export function showTopicAndGoalInfo() {
-    placeOut.textContent = "";
+    clearContentFromPlaceOut();
 
     let gitCodeLink = document.createElement("a");
     gitCodeLink.innerHTML = "[code] Посилання на Github";
@@ -105,7 +105,7 @@ export function showTopicAndGoalInfo() {
 }
 
 export function showDescribingInfo() {
-    placeOut.textContent = "";
+    clearContentFromPlaceOut();
 
     let p = document.createElement("p");
     p.textContent = lab1Info.info_2;
@@ -114,7 +114,7 @@ export function showDescribingInfo() {
 }
 
 export function showCode() {
-    placeOut.textContent = "";
+    clearContentFromPlaceOut();
 
     let contentDiv = document.createElement("div");
     contentDiv.style.paddingTop = "20px";
@@ -132,7 +132,7 @@ export function showCode() {
 }
 
 export function showAppearanceOfLab() {
-    placeOut.textContent = "";
+    clearContentFromPlaceOut();
 
     let contentDiv = document.createElement("div");
     contentDiv.style.paddingTop = "5px";
@@ -148,7 +148,7 @@ export function showAppearanceOfLab() {
 }
 
 export function showConclusion() {
-    placeOut.textContent = "";
+    clearContentFromPlaceOut();
 
     let p = document.createElement("p");
     p.textContent = lab1Info.info_5;
@@ -158,10 +158,14 @@ export function showConclusion() {
 }
 
 export function showWorkers() {
-    placeOut.textContent = "";
+    clearContentFromPlaceOut();
 
     let p = document.createElement("p");
     p.textContent = lab1Info.info_6;
 
     placeOut.appendChild(p);
+}
+
+function clearContentFromPlaceOut() {
+    placeOut.textContent = "";
 }

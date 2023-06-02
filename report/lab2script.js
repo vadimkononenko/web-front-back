@@ -92,7 +92,7 @@ export function setupSecondLabView() {
 }
 
 export function showTopicAndGoalInfo() {
-  placeOut.textContent = "";
+  clearContentFromPlaceOut();
 
   let gitCodeLink = document.createElement("a");
   gitCodeLink.innerHTML = "[code] Посилання на Github";
@@ -124,7 +124,7 @@ export function showTopicAndGoalInfo() {
 }
 
 export function showStyleMethods() {
-  placeOut.textContent = "";
+  clearContentFromPlaceOut();
 
   let contentDiv = document.createElement("div");
   contentDiv.style.paddingTop = "20px";
@@ -142,7 +142,7 @@ export function showStyleMethods() {
 }
 
 export function showTagSelectors() {
-  placeOut.textContent = "";
+  clearContentFromPlaceOut();
 
   let contentDiv = document.createElement("div");
   contentDiv.style.paddingTop = "20px";
@@ -160,7 +160,7 @@ export function showTagSelectors() {
 }
 
 export function showClassSelectors() {
-  placeOut.textContent = "";
+  clearContentFromPlaceOut();
 
   let contentDiv = document.createElement("div");
   contentDiv.style.paddingTop = "20px";
@@ -178,7 +178,7 @@ export function showClassSelectors() {
 }
 
 export function showIdSelectors() {
-  placeOut.textContent = "";
+  clearContentFromPlaceOut();
 
   let contentDiv = document.createElement("div");
   contentDiv.style.paddingTop = "20px";
@@ -196,7 +196,7 @@ export function showIdSelectors() {
 }
 
 export function showOtherSelectors() {
-  placeOut.textContent = "";
+  clearContentFromPlaceOut();
 
   let contentDiv = document.createElement("div");
   contentDiv.style.paddingTop = "20px";
@@ -214,7 +214,7 @@ export function showOtherSelectors() {
 }
 
 export function showCssInfo() {
-  placeOut.textContent = "";
+  clearContentFromPlaceOut();
 
   let contentDiv = document.createElement("div");
   contentDiv.style.paddingTop = "20px";
@@ -232,11 +232,15 @@ export function showCssInfo() {
 }
 
 export function showConclusion() {
-  placeOut.textContent = "";
+  clearContentFromPlaceOut();
 
   let p = document.createElement("p");
   p.textContent = lab2Info.conclusion;
   p.style.fontSize = "20px";
 
   placeOut.appendChild(p);
+}
+
+function clearContentFromPlaceOut() {
+  placeOut.textContent = "";
 }
