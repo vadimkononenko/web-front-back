@@ -2,8 +2,7 @@
 let length = parseInt(prompt("Введіть кількість елементів масиву:"));
 
 // Створюємо порожній масив
-let arr = [];
-fillArrayWithRandomValues(length, 0, 20);
+let arr = fillArrayWithRandomValues(length, 0, 20);
 
 let evenSum = 0;
 let maxElement ;
@@ -31,10 +30,12 @@ sortArray();
 console.log("Відсортований масив:", arr);
 
 function fillArrayWithRandomValues(length, minValue, maxValue) {
+    let arrForFill = [];
     for (let i = 0; i < length; i++) {
         let randomValue = Math.floor(Math.random() * (maxValue - minValue + 1)) + minValue;
-        arr.push(randomValue);
+        arrForFill.push(randomValue);
     }
+    return arrForFill;
 }
 
 // Знаходимо суму елементів з парними індексами
