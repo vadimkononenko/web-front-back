@@ -1,0 +1,154 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul,
+ol {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+/* Шрифти, фон, колір тексту */
+body {
+  height: 100vh;
+  line-height: 1.5;
+
+  /*color scheme*/
+  background-color: #1a1a1a;
+  color: white;
+  font-family: sans-serif;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* Убираем стиль для a тега */
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  margin: 20px 50px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#logo-img {
+  color: #dfce0d;
+  text-shadow: 1px 0 #d3c665, 0 -1px #d3c665, -1px 0 #d3c665, 0 1px #d3c665;
+}
+
+.navigation ul {
+  display: flex;
+  list-style: none;
+  color: #dfce0d;
+  font-weight: bolder;
+}
+
+.navigation ul li {
+  margin: 10px 10px;
+}
+
+.main {
+  margin-top: 50px;
+}
+
+.line {
+  margin: 15px 0;
+  height: 1px;
+  width: 100%;
+  background-color: #dfce0d;
+}
+
+.cards {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+/* Контури */
+.cards .card img {
+  width: 150px;
+  height: 200px;
+  border-radius: 15px;
+}
+/* CSS просунутий */
+.cards .card img:hover {
+  scale: 1.1;
+  box-shadow: 0 0 10px 0 #dfce0d, 0 0 10px 0 #dfce0d;
+}
+
+.cards .card:not(:last-child) {
+  margin-right: 30px;
+}
+
+.description-info {
+  margin-top: 40px;
+  margin-left: 20px;
+  display: flex;
+  align-items: flex-start;
+}
+/* CSS для таблиць та багаторівневих списків */
+.description-info ol {
+  margin-right: 100px;
+}
+
+.description-info ol li {
+  font-size: 18px;
+}
+
+.description-info table,
+th,
+td {
+  text-align: center;
+  /*border: 1px solid white;*/
+  border-collapse: collapse;
+}
+
+.description-info table th {
+  width: 100px;
+}
+
+.description-info table tr {
+  height: 40px;
+}
