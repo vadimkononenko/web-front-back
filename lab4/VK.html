@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vadym Kononenko</title>
+    <style>
+        #menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #menu ul li {
+            display: inline-block;
+            position: relative;
+        }
+
+        #menu ul li a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        #menu ul li:hover > ul {
+            display: block;
+        }
+
+        #menu ul ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #f9f9f9;
+            padding: 0;
+        }
+
+        #menu ul ul li {
+            display: block;
+            width: 200px;
+        }
+
+        #menu ul ul li a {
+            padding: 8px 10px;
+        }
+
+        .content {
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="menu">
+    <ul>
+        <li><a href="index.html">Головна</a></li>
+        <li>
+            <a href="#">Категорія 1</a>
+            <ul>
+                <li><a href="page1.html">Сторінка 1</a></li>
+                <li><a href="page2.html">Сторінка 2</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Категорія 2</a>
+            <ul>
+                <li><a href="page3.html">Сторінка 3</a></li>
+                <li><a href="page4.html">Сторінка 4</a></li>
+            </ul>
+        </li>
+        <li><a href="about.html">Про нас</a></li>
+    </ul>
+</div>
+
+<!-- Вміст сторінки -->
+<div class="content">
+    <h1>Головна сторінка</h1>
+    <!-- Загальний вміст сторінки -->
+</div>
+
+<script src="solver_vk.js"></script>
+
+</body>
+</html>
