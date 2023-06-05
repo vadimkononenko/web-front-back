@@ -5,29 +5,43 @@ let length = parseInt(prompt("Введіть кількість елементі
 let arr = fillArrayWithRandomValues(length, 0, 20);
 
 let evenSum = 0;
-let maxElement ;
-let maxIndex;
-let minElement;
-let minIndex;
+let maxElement = 0;
+let maxIndex = 0;
+let minElement = 0;
+let minIndex = 0;
 
 calcSumOfEvenElements();
 findMaxElementByOddIndex();
 findMinElementByOddIndex();
 
-// Виводимо результати
-console.log("1.\n");
-console.log("Масив:", arr);
-console.log("Сума елементів з парними індексами:", evenSum);
-console.log("Максимальний елемент:", maxElement);
-console.log("Його індекс:", maxIndex);
-console.log("Мінімальний елемент:", minElement);
-console.log("Його індекс:", minIndex);
+setupView();
 
-// Виводимо відсортований масив
-console.log("\n2.\n");
-console.log("Початковий масив:", arr);
-sortArray();
-console.log("Відсортований масив:", arr);
+function setupView() {
+    let originalArraySpan = document.getElementById("original-array");
+    originalArraySpan.textContent = arr.join(", ");
+
+    let evenSumSpan = document.getElementById("even-sum");
+    evenSumSpan.textContent = evenSum;
+
+    let maxElemSpan = document.getElementById("max-elem");
+    maxElemSpan.textContent = maxElement;
+
+    let maxIndexSpan = document.getElementById("max-index");
+    maxIndexSpan.textContent = maxIndex;
+
+    let minElemSpan = document.getElementById("min-elem");
+    minElemSpan.innerText = minElement;
+
+    let minIndexSpan = document.getElementById("min-index");
+    minIndexSpan.textContent = minIndex;
+
+    let origArraySpan = document.getElementById("orig-array");
+    origArraySpan.textContent = arr.join(", ");
+
+    sortArray();
+    let sortedArraySpan = document.getElementById("sorted-array");
+    sortedArraySpan.textContent = arr.join(", ");
+}
 
 function fillArrayWithRandomValues(length, minValue, maxValue) {
     let arrForFill = [];
