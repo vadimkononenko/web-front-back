@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Реєстрація користувача</title>
+  <script src="script_kk.js"></script>
+</head>
+<body>
+  <h2>Форма реєстрації користувача</h2>
+  <form name="registrationForm" onsubmit="return validateForm()">
+    <label for="username">Ім'я користувача*: </label>
+    <input type="text" id="username" name="username" required><br><br>
+    
+    <label for="password">Пароль*: </label>
+    <input type="password" id="password" name="password" required><br><br>
+    
+    <label for="confirmPassword">Підтвердження паролю*: </label>
+    <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+    
+    <label for="age">Вік*: </label>
+    <input type="text" id="age" name="age" required><br><br>
+    
+    <label for="height">Висота: </label>
+    <input type="text" id="height" name="height"><br><br>
+    
+    <label for="birthDate">Дата народження (DD.MM.YYYY)*: </label>
+    <input type="text" id="birthDate" name="birthDate" required><br><br>
+    
+    <input type="submit" value="Зареєструватися">
+  </form>
+</body>
+</html>
