@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота 5 Кононенко Вадим</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/unitegallery/1.7.40/css/unite-gallery.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="https://www.meteoprog.ua/css/winformer.min.css?id=100">
+</head>
+</head>
+<body>
+
+<div class="container">
+    <div class="dynamic-elements">
+        <div class="p-10">
+            <h3>Datepicker</h3>
+            <input type="text" id="datepicker">
+        </div>
+
+        <div class="p-10">
+            <h3>Slider</h3>
+            <div id="slider"></div>
+            <span id="slider-value">0</span>
+        </div>
+
+        <div class="p-10">
+            <h3>Tooltip</h3>
+            <span id="tooltipElem" title="Кононенко Вадим 😎">Хто це зробив???</span>
+        </div>
+    </div>
+
+    <div class="socials p-10">
+        <h3>Socials</h3>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-pinterest"></a>
+    </div>
+
+    <!-- Погода -->
+    <div class="meteoprog-informer"
+         style="width: 312px"
+         data-params='{"city_ids":"2533","domain":"https://www.meteoprog.com/ua/", "id":"645b736a2bac92e5528b4f08","lang":"ua"}'>
+        <a title="Погода в місті Київ"
+           target="_blank"
+           href="https://www.meteoprog.com/ua/weather/Kyiv/">
+            <img style="margin: 0 auto; display: block"
+                 src="https://www.meteoprog.ua/images/preloader.gif"
+                 alt="Loading...">
+        </a>
+        <a target="_blank"
+           class="constructor__met2wlink"
+           href="https://www.meteoprog.com/ua/review/Kyiv/">
+            Погода на 2 тижні
+        </a>
+        <a class="constructor__metlink"
+           target="_blank"
+           href="https://www.meteoprog.com/ua/">
+            <img style="display: block; margin: 0 auto;"
+                 alt="Meteoprog"
+                 src="https://www.meteoprog.ua/images/meteoprog-inf.png">
+        </a>
+    </div>
+
+    <div id="clock">
+        <div class="hand hour-hand"></div>
+        <div class="hand minute-hand"></div>
+        <div class="hand second-hand"></div>
+        <div class="center-circle"></div>
+    </div>
+
+    <div id="currency"></div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/unitegallery/1.7.40/js/unitegallery.js"></script>
+<script type="text/javascript" src="https://www.meteoprog.ua/js/winformer.min.js?id=100"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

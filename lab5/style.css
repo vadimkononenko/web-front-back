@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.p-10 {
+    padding: 10px;
+}
+
+.container {
+    margin: 10px;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+.fa-pinterest {
+    background: #cb2027;
+    color: white;
+}
+
+
+
+#clock {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 50px auto;
+    border-radius: 50%;
+    background-color: #f2f2f2;
+    border: 2px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hand {
+    position: absolute;
+    background-color: #333;
+    transition: transform 0.3s;
+}
+
+.hour-hand {
+    width: 4px;
+    height: 70px;
+    transform-origin: bottom center;
+    transform: rotate(180deg);
+    left: calc(50% - 2px);
+    bottom: 50%;
+}
+
+.minute-hand {
+    width: 3px;
+    height: 100px;
+    transform-origin: bottom center;
+    left: calc(50% - 1.5px);
+    bottom: 50%;
+}
+
+.second-hand {
+    width: 1px;
+    height: 110px;
+    background-color: red;
+    transform-origin: bottom center;
+    left: calc(50% - 0.5px);
+    bottom: 50%;
+}
+
+.center-circle {
+    position: absolute;
+    top: calc(50% - 10px);
+    left: calc(50% - 10px);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #333;
+}
