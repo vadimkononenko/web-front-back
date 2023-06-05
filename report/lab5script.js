@@ -21,6 +21,10 @@ export const lab5Info = {
     informers_clock_js: "./assets/lab5/informers_clock_js.png",
     informer_currency: "./assets/lab5/informer_currency.png",
     informer_currency_js: "./assets/lab5/informer_currency_js.png",
+    gallery_photo: "./assets/lab5/gallery_photo.png",
+    gallery_html: "./assets/lab5/gallery_html.png",
+    gallery_video: "./assets/lab5/gallery_video.png",
+    gallery_video_html: "./assets/lab5/gallery_video_html.png",
     conclusion: "Висновки роботи: внаслідок виконання лабораторної роботи було удосконалено головну сторінку нашого проєкту та придбано практичні навички функціонального застосування JavaScript у HTML-документі, були придбані практичні навички роботи jQuery UI, ми навчились додавати до сайту динамічні елементи цієї бібліотеки, додали плагін галереї UniteGallery, кнопки соціальних мереж, інформери та інше.",
 };
 
@@ -49,20 +53,15 @@ export function setupFifthLabView() {
     unityGalleryDiv.innerHTML = "UnityGallery";
     // urlSchemaDiv.addEventListener("click", showTagSelectors);
 
-    let photoGalleryDiv = document.createElement("div");
-    photoGalleryDiv.classList.add("inner-chapter");
-    photoGalleryDiv.innerHTML = "Фотогалерея";
-    // eventDiv.addEventListener("click", showClassSelectors);
-
     let sliderPhotoDiv = document.createElement("div");
     sliderPhotoDiv.classList.add("inner-chapter");
     sliderPhotoDiv.innerHTML = "Слайдер фотографій";
-    // idSelectorsDiv.addEventListener("click", showIdSelectors);
+    sliderPhotoDiv.addEventListener("click", showPhotoGallery);
 
     let sliderVideoDiv = document.createElement("div");
     sliderVideoDiv.classList.add("inner-chapter");
     sliderVideoDiv.innerHTML = "Слайдер відео";
-    // otherSelectorsDiv.addEventListener("click", showOtherSelectors);
+    sliderVideoDiv.addEventListener("click", showGalleryVideo);
 
     let socialsDiv = document.createElement("div");
     socialsDiv.classList.add("chapter");
@@ -82,7 +81,6 @@ export function setupFifthLabView() {
     labNavView.appendChild(topicDiv);
     labNavView.appendChild(dynamicElemsDiv);
     labNavView.appendChild(unityGalleryDiv);
-    labNavView.appendChild(photoGalleryDiv);
     labNavView.appendChild(sliderPhotoDiv);
     labNavView.appendChild(sliderVideoDiv);
     labNavView.appendChild(socialsDiv);
@@ -270,6 +268,57 @@ function showInformers() {
     contentDiv.appendChild(informersCurrencyImg);
     contentDiv.appendChild(informersCurrencyJsImg);
 
+}
+function showPhotoGallery() {
+    clearContentFromPlaceOut();
+
+    let contentDiv = document.createElement("div");
+    contentDiv.style.paddingTop = "20px";
+    contentDiv.style.paddingBottom = "10px";
+    contentDiv.style.maxHeight = "850px";
+    contentDiv.style.overflowX = "auto";
+    contentDiv.style.overflowY = "auto";
+
+    let galleryPhotoImg = document.createElement("img");
+    galleryPhotoImg.src = lab5Info.gallery_photo;
+    galleryPhotoImg.style.width = "1000px";
+    galleryPhotoImg.style.objectFit = "scale-down"
+
+    let galleryPhotoHTMLImg = document.createElement("img");
+    galleryPhotoHTMLImg.src = lab5Info.gallery_html;
+    galleryPhotoHTMLImg.style.width = "1000px";
+    galleryPhotoHTMLImg.style.objectFit = "scale-down"
+
+    placeOut.appendChild(contentDiv);
+
+    contentDiv.appendChild(galleryPhotoImg);
+    contentDiv.appendChild(galleryPhotoHTMLImg);
+}
+
+function showGalleryVideo() {
+    clearContentFromPlaceOut();
+
+    let contentDiv = document.createElement("div");
+    contentDiv.style.paddingTop = "20px";
+    contentDiv.style.paddingBottom = "10px";
+    contentDiv.style.maxHeight = "850px";
+    contentDiv.style.overflowX = "auto";
+    contentDiv.style.overflowY = "auto";
+
+    let galleryVideoImg = document.createElement("img");
+    galleryVideoImg.src = lab5Info.gallery_video;
+    galleryVideoImg.style.width = "1000px";
+    galleryVideoImg.style.objectFit = "scale-down"
+
+    let galleryVideoHTMLImg = document.createElement("img");
+    galleryVideoHTMLImg.src = lab5Info.gallery_video_html;
+    galleryVideoHTMLImg.style.width = "1000px";
+    galleryVideoHTMLImg.style.objectFit = "scale-down"
+
+    placeOut.appendChild(contentDiv);
+
+    contentDiv.appendChild(galleryVideoImg);
+    contentDiv.appendChild(galleryVideoHTMLImg);
 }
 
 export function showConclusion() {
