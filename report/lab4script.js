@@ -27,7 +27,7 @@ export const lab4Info = {
         js_code: "./assets/lab4/kk_js_code.png"
     },
     conclusion:
-        "Висновки роботи: виконуючи лабораторну роботу 2 ми навчилися працювати з селекторами, списками, ідентифікаторами, відступами, плаваючими елементами, та покращили навички оформлення текстових елементів",
+        "Висновки роботи: внаслідок виконання лабораторної роботи було удосконалено головну сторінку нашого проєкту та придбано практичні навички функціонального застосування JavaScript у HTML-документі, були використані масиви та практикувалась реалізація сторінки мовою JavaScript.",
 };
 
 const placeOut = document.getElementById("place-out");
@@ -80,6 +80,11 @@ export function setupFourthLabView() {
     implSixDiv.innerHTML = "Виконання (6)";
     implSixDiv.addEventListener("click", showImplSix);
 
+    let conclusionDiv = document.createElement("div");
+    conclusionDiv.classList.add("chapter");
+    conclusionDiv.innerHTML = "Висновки";
+    conclusionDiv.addEventListener("click", showConclusion);
+
     labNavView.appendChild(topicDiv);
     labNavView.appendChild(funcUsingDiv);
     labNavView.appendChild(urlSchemaDiv);
@@ -88,6 +93,7 @@ export function setupFourthLabView() {
     labNavView.appendChild(tagScriptDiv);
     labNavView.appendChild(arraysDiv);
     labNavView.appendChild(implSixDiv);
+    labNavView.appendChild(conclusionDiv);
 
     showTopicAndGoalInfo();
 }
@@ -146,12 +152,12 @@ export function showURLSchema() {
     let contentDiv = document.createElement("div");
     contentDiv.style.paddingTop = "20px";
     contentDiv.style.paddingBottom = "10px";
-    contentDiv.style.maxHeight = "580px";
+    contentDiv.style.maxHeight = "850px";
     contentDiv.style.overflowX = "auto";
     contentDiv.style.overflowY = "auto";
 
     let img = document.createElement("img");
-    img.src = lab4Info.style_methods;
+    // img.src = lab4Info.style_methods;
     img.style.width = "1000px";
     img.style.objectFit = "scale-down";
 
@@ -164,7 +170,7 @@ export function showArrays() {
     let contentDiv = document.createElement("div");
     contentDiv.style.paddingTop = "20px";
     contentDiv.style.paddingBottom = "10px";
-    contentDiv.style.maxHeight = "730px";
+    contentDiv.style.maxHeight = "850px";
     contentDiv.style.overflowX = "auto";
     contentDiv.style.overflowY = "auto";
 
@@ -262,7 +268,7 @@ export function showImplSix() {
     let contentDiv = document.createElement("div");
     contentDiv.style.paddingTop = "20px";
     contentDiv.style.paddingBottom = "10px";
-    contentDiv.style.maxHeight = "730px";
+    contentDiv.style.maxHeight = "850px";
     contentDiv.style.overflowX = "auto";
     contentDiv.style.overflowY = "auto";
 
@@ -327,6 +333,16 @@ export function showImplSix() {
     contentDiv.appendChild(kk);
     contentDiv.appendChild(kkFormImg);
     contentDiv.appendChild(kkCodeImg);
+}
+
+export function showConclusion() {
+    clearContentFromPlaceOut();
+
+    let p = document.createElement("p");
+    p.textContent = lab4Info.conclusion;
+    p.style.fontSize = "20px";
+
+    placeOut.appendChild(p);
 }
 
 function clearContentFromPlaceOut() {
