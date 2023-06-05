@@ -4,7 +4,7 @@ import * as lab4 from "./lab4script.js";
 import * as lab5 from "./lab5script.js";
 
 // lab1.setupFirstLabView();
-lab4.setupFourthLabView();
+lab5.setupFifthLabView();
 
 const laba1 = document.getElementById("laba1");
 laba1.onclick = lab1.setupFirstLabView;

@@ -7,8 +7,21 @@ export const lab5Info = {
         "Тема: ВИКОРИСТАННЯ В СЦЕНАРІЯХ JAVASCRIPT БІБЛІОТЕК КРОС-БРАУЗЕРНИХ ІНТЕРФЕЙСІВ МЕТОДІВ DOM. БІБЛІОТЕКА JQUERY UI. ЗАСОБИ НАЛАГОДЖЕННЯ І ТЕСТУВАННЯ СЦЕНАРІЇВ JAVASCRIPT.",
     goal:
         "Мета: придбати практичні навички роботи jQuery UI, вміти додавати до сайту динамічні елементи цієї бібліотеки, плагін галереї UniteGallery, кнопки соціальних мереж, інформери та інше.",
-    conclusion:
-        "Висновки роботи: виконуючи лабораторну роботу 2 ми навчилися працювати з селекторами, списками, ідентифікаторами, відступами, плаваючими елементами, та покращили навички оформлення текстових елементів",
+    dynamic: "./assets/lab5/dynamic.png",
+    dynamic_js: "./assets/lab5/dynamic_js.png",
+    dynamic_html: "./assets/lab5/dynamic_html.png",
+    socials: "./assets/lab5/socials.png",
+    socials_styles: "./assets/lab5/socials_styles.png",
+    socials_html: "./assets/lab5/socials_html.png",
+    informer_forecast: "./assets/lab5/informer_forecast.png",
+    informers_forecast_html: "./assets/lab5/informers_forecast_html.png",
+    informer_clock: "./assets/lab5/informer_clock.png",
+    informers_clock_html: "./assets/lab5/informers_clock_html.png",
+    informers_clock_css: "./assets/lab5/informers_clock_css.png",
+    informers_clock_js: "./assets/lab5/informers_clock_js.png",
+    informer_currency: "./assets/lab5/informer_currency.png",
+    informer_currency_js: "./assets/lab5/informer_currency_js.png",
+    conclusion: "Висновки роботи: внаслідок виконання лабораторної роботи було удосконалено головну сторінку нашого проєкту та придбано практичні навички функціонального застосування JavaScript у HTML-документі, були придбані практичні навички роботи jQuery UI, ми навчились додавати до сайту динамічні елементи цієї бібліотеки, додали плагін галереї UniteGallery, кнопки соціальних мереж, інформери та інше.",
 };
 
 const placeOut = document.getElementById("place-out");
@@ -24,12 +37,12 @@ export function setupFifthLabView() {
     let topicDiv = document.createElement("div");
     topicDiv.classList.add("chapter");
     topicDiv.innerHTML = "Тема, мета, ЛР №5 Місце розташування сайту, звіту";
-    // topicDiv.addEventListener("click", showTopicAndGoalInfo);
+    topicDiv.addEventListener("click", showTopicAndGoalInfo);
 
     let dynamicElemsDiv = document.createElement("div");
     dynamicElemsDiv.classList.add("chapter");
     dynamicElemsDiv.innerHTML = "Динамічні елементи 3 пункту";
-    // styleMethodsDiv.addEventListener("click", showStyleMethods);
+    dynamicElemsDiv.addEventListener("click", showDynamicElements);
 
     let unityGalleryDiv = document.createElement("div");
     unityGalleryDiv.classList.add("chapter");
@@ -54,12 +67,17 @@ export function setupFifthLabView() {
     let socialsDiv = document.createElement("div");
     socialsDiv.classList.add("chapter");
     socialsDiv.innerHTML = "Кнопки соціальних мереж";
-    // arraysDiv.addEventListener("click", showCssInfo);
+    socialsDiv.addEventListener("click", showSocialsButtons);
 
     let informersDiv = document.createElement("div");
     informersDiv.classList.add("chapter");
     informersDiv.innerHTML = "Інформери";
-    // conclusionDiv.addEventListener("click", showConclusion);
+    informersDiv.addEventListener("click", showInformers);
+
+    let conclusionDiv = document.createElement("div");
+    conclusionDiv.classList.add("chapter");
+    conclusionDiv.innerHTML = "Висновки";
+    conclusionDiv.addEventListener("click", showConclusion);
 
     labNavView.appendChild(topicDiv);
     labNavView.appendChild(dynamicElemsDiv);
@@ -69,6 +87,7 @@ export function setupFifthLabView() {
     labNavView.appendChild(sliderVideoDiv);
     labNavView.appendChild(socialsDiv);
     labNavView.appendChild(informersDiv);
+    labNavView.appendChild(conclusionDiv);
 
     showTopicAndGoalInfo();
 }
@@ -119,6 +138,148 @@ export function showTopicAndGoalInfo() {
     placeOut.appendChild(gitPagesLinkGallery);
     placeOut.appendChild(brEl5);
     placeOut.appendChild(gitPagesLinkVideoGallery);
+}
+
+function showDynamicElements() {
+    clearContentFromPlaceOut();
+
+    let contentDiv = document.createElement("div");
+    contentDiv.style.paddingTop = "20px";
+    contentDiv.style.paddingBottom = "10px";
+    contentDiv.style.maxHeight = "850px";
+    contentDiv.style.overflowX = "auto";
+    contentDiv.style.overflowY = "auto";
+
+    let dynamicImg = document.createElement("img");
+    dynamicImg.src = lab5Info.dynamic;
+    dynamicImg.style.width = "1000px";
+    dynamicImg.style.height = "200px";
+    dynamicImg.style.objectFit = "scale-down"
+
+    let dynamicJSImg = document.createElement("img");
+    dynamicJSImg.src = lab5Info.dynamic_js;
+    dynamicJSImg.style.width = "1000px";
+    dynamicJSImg.style.objectFit = "scale-down"
+
+    let dynamicHTMLImg = document.createElement("img");
+    dynamicHTMLImg.src = lab5Info.dynamic_html;
+    dynamicHTMLImg.style.width = "1000px";
+    dynamicHTMLImg.style.objectFit = "scale-down"
+
+    placeOut.appendChild(contentDiv);
+
+    contentDiv.appendChild(dynamicImg);
+    contentDiv.appendChild(dynamicJSImg);
+    contentDiv.appendChild(dynamicHTMLImg);
+}
+
+function showSocialsButtons() {
+    clearContentFromPlaceOut();
+
+    let contentDiv = document.createElement("div");
+    contentDiv.style.paddingTop = "20px";
+    contentDiv.style.paddingBottom = "10px";
+    contentDiv.style.maxHeight = "850px";
+    contentDiv.style.overflowX = "auto";
+    contentDiv.style.overflowY = "auto";
+
+    let socialsImg = document.createElement("img");
+    socialsImg.src = lab5Info.socials;
+    socialsImg.style.width = "1000px";
+    socialsImg.style.height = "300px";
+    socialsImg.style.objectFit = "scale-down"
+
+    let socialsStylesImg = document.createElement("img");
+    socialsStylesImg.src = lab5Info.socials_styles;
+    socialsStylesImg.style.width = "1000px";
+    socialsStylesImg.style.objectFit = "scale-down"
+
+    let socialsHTMLImg = document.createElement("img");
+    socialsHTMLImg.src = lab5Info.socials_html;
+    socialsHTMLImg.style.width = "1000px";
+    socialsHTMLImg.style.objectFit = "scale-down"
+
+    placeOut.appendChild(contentDiv);
+
+    contentDiv.appendChild(socialsImg);
+    contentDiv.appendChild(socialsStylesImg);
+    contentDiv.appendChild(socialsHTMLImg);
+}
+
+function showInformers() {
+    clearContentFromPlaceOut();
+
+    let contentDiv = document.createElement("div");
+    contentDiv.style.paddingTop = "20px";
+    contentDiv.style.paddingBottom = "10px";
+    contentDiv.style.maxHeight = "850px";
+    contentDiv.style.overflowX = "auto";
+    contentDiv.style.overflowY = "auto";
+
+    let informersForecastImg = document.createElement("img");
+    informersForecastImg.src = lab5Info.informer_forecast;
+    informersForecastImg.style.width = "1000px";
+    informersForecastImg.style.marginTop = "-300px";
+    informersForecastImg.style.objectFit = "scale-down"
+
+    let informersClockImg = document.createElement("img");
+    informersClockImg.src = lab5Info.informer_clock;
+    informersClockImg.style.width = "1000px";
+    informersClockImg.style.objectFit = "scale-down"
+
+    let informersCurrencyImg = document.createElement("img");
+    informersCurrencyImg.src = lab5Info.informer_currency;
+    informersCurrencyImg.style.width = "1000px";
+    informersCurrencyImg.style.objectFit = "scale-down"
+
+    let informersForecastHtmlImg = document.createElement("img");
+    informersForecastHtmlImg.src = lab5Info.informers_forecast_html;
+    informersForecastHtmlImg.style.width = "1000px";
+    informersForecastHtmlImg.style.objectFit = "scale-down"
+
+    let informersClockHtmlImg = document.createElement("img");
+    informersClockHtmlImg.src = lab5Info.informers_clock_html;
+    informersClockHtmlImg.style.width = "1000px";
+    informersClockHtmlImg.style.objectFit = "scale-down"
+
+    let informersCurrencyJsImg = document.createElement("img");
+    informersCurrencyJsImg.src = lab5Info.informer_currency_js;
+    informersCurrencyJsImg.style.width = "1000px";
+    informersCurrencyJsImg.style.objectFit = "scale-down"
+
+    let informersClockCssImg = document.createElement("img");
+    informersClockCssImg.src = lab5Info.informers_clock_css;
+    informersClockCssImg.style.width = "1000px";
+    informersClockCssImg.style.objectFit = "scale-down"
+
+    let informersClockJsImg = document.createElement("img");
+    informersClockJsImg.src = lab5Info.informers_clock_js;
+    informersClockJsImg.style.width = "1000px";
+    informersClockJsImg.style.objectFit = "scale-down"
+
+    placeOut.appendChild(contentDiv);
+
+    contentDiv.appendChild(informersForecastImg);
+    contentDiv.appendChild(informersForecastHtmlImg);
+
+    contentDiv.appendChild(informersClockImg);
+    contentDiv.appendChild(informersClockHtmlImg);
+    contentDiv.appendChild(informersClockCssImg);
+    contentDiv.appendChild(informersClockJsImg);
+
+    contentDiv.appendChild(informersCurrencyImg);
+    contentDiv.appendChild(informersCurrencyJsImg);
+
+}
+
+export function showConclusion() {
+    clearContentFromPlaceOut();
+
+    let p = document.createElement("p");
+    p.textContent = lab5Info.conclusion;
+    p.style.fontSize = "20px";
+
+    placeOut.appendChild(p);
 }
 
 function clearContentFromPlaceOut() {
