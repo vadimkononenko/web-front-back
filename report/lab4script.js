@@ -13,6 +13,7 @@ export const lab4Info = {
         menu_task: "./assets/lab4/vk_menu.png",
         page_code: "./assets/lab4/vk_page.png",
         js_code: "./assets/lab4/vk_js_code.png",
+        styles_menu: "./assets/lab4/vk_styles_menu.png",
     },
     ar: {
         gist: "./assets/lab4/ar_gist.png",
@@ -77,7 +78,7 @@ export function setupFourthLabView() {
     let implSixDiv = document.createElement("div");
     implSixDiv.classList.add("chapter");
     implSixDiv.innerHTML = "Виконання (6)";
-    // conclusionDiv.addEventListener("click", showConclusion);
+    implSixDiv.addEventListener("click", showImplSix);
 
     labNavView.appendChild(topicDiv);
     labNavView.appendChild(funcUsingDiv);
@@ -191,11 +192,6 @@ export function showArrays() {
     vkJSCodeImg.style.width = "1000px";
     vkJSCodeImg.style.objectFit = "scale-down";
 
-    let vkMenuImg = document.createElement("img");
-    vkMenuImg.src = lab4Info.vk.menu_task;
-    vkMenuImg.style.width = "1000px";
-    vkMenuImg.style.height = "500px";
-    vkMenuImg.style.objectFit = "scale-down";
 
 
     let ar = document.createElement("p");
@@ -211,12 +207,6 @@ export function showArrays() {
     arGistImg.style.width = "1000px";
     arGistImg.style.height = "500px";
     arGistImg.style.objectFit = "scale-down";
-
-    let arTask2Img = document.createElement("img");
-    arTask2Img.src = lab4Info.ar.task2;
-    arTask2Img.style.width = "1000px";
-    arTask2Img.style.height = "700px";
-    arTask2Img.style.objectFit = "scale-down";
 
     let arPageCodeImg = document.createElement("img");
     arPageCodeImg.src = lab4Info.ar.page_code;
@@ -237,12 +227,6 @@ export function showArrays() {
     kkArraysLink.href = lab4Info.git_pages_link_lab4_kk;
     kkArraysLink.classList.add("git-link-appearance");
 
-    let kkFormImg = document.createElement("img");
-    kkFormImg.src = lab4Info.kk.form_task;
-    kkFormImg.style.width = "1000px";
-    kkFormImg.style.height = "380px";
-    kkFormImg.style.objectFit = "scale-down";
-
     let kkPageCodeImg = document.createElement("img");
     kkPageCodeImg.src = lab4Info.ar.page_code;
     kkPageCodeImg.style.width = "1000px";
@@ -259,21 +243,90 @@ export function showArrays() {
     contentDiv.appendChild(vkArraysLink);
     contentDiv.appendChild(vkTask1Img);
     contentDiv.appendChild(vkPageImg);
-    contentDiv.appendChild(vkMenuImg);
     contentDiv.appendChild(vkJSCodeImg);
 
     contentDiv.appendChild(ar);
     contentDiv.appendChild(arArraysLink);
     contentDiv.appendChild(arGistImg);
-    contentDiv.appendChild(arTask2Img);
     contentDiv.appendChild(arPageCodeImg);
     contentDiv.appendChild(arJSCodeImg);
 
     contentDiv.appendChild(kk);
     contentDiv.appendChild(kkArraysLink);
-    contentDiv.appendChild(kkFormImg);
-    contentDiv.appendChild(kkPageCodeImg);
     contentDiv.appendChild(kkJSCodeImg);
+}
+
+export function showImplSix() {
+    clearContentFromPlaceOut();
+
+    let contentDiv = document.createElement("div");
+    contentDiv.style.paddingTop = "20px";
+    contentDiv.style.paddingBottom = "10px";
+    contentDiv.style.maxHeight = "730px";
+    contentDiv.style.overflowX = "auto";
+    contentDiv.style.overflowY = "auto";
+
+    let vk = document.createElement("h3");
+    vk.textContent = "ІП-05 Кононенко Вадим";
+
+    let vkMenuImg = document.createElement("img");
+    vkMenuImg.src = lab4Info.vk.menu_task;
+    vkMenuImg.style.width = "1000px";
+    vkMenuImg.style.height = "500px";
+    vkMenuImg.style.objectFit = "scale-down";
+
+    let vkStylesMenuImg = document.createElement("img");
+    vkStylesMenuImg.src = lab4Info.vk.styles_menu;
+    vkStylesMenuImg.style.width = "1000px";
+    vkStylesMenuImg.style.objectFit = "scale-down";
+
+    let ar = document.createElement("h3");
+    ar.textContent = "ІП-05 Рогозний Олексій";
+
+    let arTask2Img = document.createElement("img");
+    arTask2Img.src = lab4Info.ar.task2;
+    arTask2Img.style.width = "1000px";
+    arTask2Img.style.height = "700px";
+    arTask2Img.style.objectFit = "scale-down";
+
+    let arPageCodeImg = document.createElement("img");
+    arPageCodeImg.src = lab4Info.ar.page_code;
+    arPageCodeImg.style.width = "1000px";
+    arPageCodeImg.style.objectFit = "scale-down";
+
+    let arJSCodeImg = document.createElement("img");
+    arJSCodeImg.src = lab4Info.ar.js_code;
+    arJSCodeImg.style.width = "1000px";
+    arJSCodeImg.style.objectFit = "scale-down";
+
+    let kk = document.createElement("h3");
+    kk.textContent = "ІП-05 Комісар Кіріл";
+
+    let kkFormImg = document.createElement("img");
+    kkFormImg.src = lab4Info.kk.form_task;
+    kkFormImg.style.width = "1000px";
+    kkFormImg.style.height = "380px";
+    kkFormImg.style.objectFit = "scale-down";
+
+    let kkCodeImg = document.createElement("img");
+    kkCodeImg.src = lab4Info.kk.page_code;
+    kkCodeImg.style.width = "1000px";
+    kkCodeImg.style.objectFit = "scale-down";
+
+    placeOut.appendChild(contentDiv);
+
+    contentDiv.appendChild(vk);
+    contentDiv.appendChild(vkMenuImg);
+    contentDiv.appendChild(vkStylesMenuImg);
+
+    contentDiv.appendChild(ar);
+    contentDiv.appendChild(arTask2Img);
+    contentDiv.appendChild(arPageCodeImg);
+    contentDiv.appendChild(arJSCodeImg);
+
+    contentDiv.appendChild(kk);
+    contentDiv.appendChild(kkFormImg);
+    contentDiv.appendChild(kkCodeImg);
 }
 
 function clearContentFromPlaceOut() {
