@@ -1,6 +1,7 @@
 export const lab4Info = {
     git_code_link: "https://github.com/vadimkononenko/web-front-back/tree/main/lab4",
     git_pages_link: "https://vadimkononenko.github.io/web-front-back/lab4",
+    git_pages_link_func_using: "https://vadimkononenko.github.io/web-front-back/lab4/func_using.html",
     git_pages_link_lab4_vk: "https://vadimkononenko.github.io/web-front-back/lab4/lab4_VK.html",
     git_pages_link_lab4_ar: "https://vadimkononenko.github.io/web-front-back/lab4/lab4_AR.html",
     git_pages_link_lab4_kk: "https://vadimkononenko.github.io/web-front-back/lab4/lab4_KK.html",
@@ -26,6 +27,15 @@ export const lab4Info = {
         page_code: "./assets/lab4/kk_code.png",
         js_code: "./assets/lab4/kk_js_code.png"
     },
+    google_link: "./assets/lab4/google_link.png",
+    google_link_html: "./assets/lab4/google_link_html.png",
+    advice: "./assets/lab4/advice.png",
+    advice_html: "./assets/lab4/advice_html.png",
+    advice_alert: "./assets/lab4/advice_alert.png",
+    secret_html: "./assets/lab4/secret_html.png",
+    secret_alert: "./assets/lab4/secret_alert.png",
+    insertion: "./assets/lab4/insertion.png",
+    insertion_code: "./assets/lab4/insertion_code.png",
     conclusion:
         "Висновки роботи: внаслідок виконання лабораторної роботи було удосконалено головну сторінку нашого проєкту та придбано практичні навички функціонального застосування JavaScript у HTML-документі, були використані масиви та реалізували сторінки мовою JavaScript.",
 };
@@ -53,22 +63,22 @@ export function setupFourthLabView() {
     let urlSchemaDiv = document.createElement("div");
     urlSchemaDiv.classList.add("inner-chapter");
     urlSchemaDiv.innerHTML = "Схема URL";
-    // urlSchemaDiv.addEventListener("click", showTagSelectors);
+    urlSchemaDiv.addEventListener("click", showURLSchema);
 
     let eventDiv = document.createElement("div");
     eventDiv.classList.add("inner-chapter");
     eventDiv.innerHTML = "Обробник подій";
-    // eventDiv.addEventListener("click", showClassSelectors);
+    eventDiv.addEventListener("click", showEvenListener);
 
     let entityDiv = document.createElement("div");
     entityDiv.classList.add("inner-chapter");
     entityDiv.innerHTML = "Підстановка (entity)";
-    // idSelectorsDiv.addEventListener("click", showIdSelectors);
+    entityDiv.addEventListener("click", showEntity);
 
     let tagScriptDiv = document.createElement("div");
     tagScriptDiv.classList.add("inner-chapter");
     tagScriptDiv.innerHTML = "script";
-    // otherSelectorsDiv.addEventListener("click", showOtherSelectors);
+    tagScriptDiv.addEventListener("click", showScript);
 
     let arraysDiv = document.createElement("div");
     arraysDiv.classList.add("chapter");
@@ -156,12 +166,134 @@ export function showURLSchema() {
     contentDiv.style.overflowX = "auto";
     contentDiv.style.overflowY = "auto";
 
+    let funcUsingLink = document.createElement("a");
+    funcUsingLink.innerHTML = "[сторінка з функціональними застосуванням]";
+    funcUsingLink.href = lab4Info.git_pages_link_func_using;
+    funcUsingLink.classList.add("git-link-appearance");
+
     let img = document.createElement("img");
-    // img.src = lab4Info.style_methods;
+    img.src = lab4Info.google_link;
     img.style.width = "1000px";
     img.style.objectFit = "scale-down";
 
-    placeOut.appendChild(contentDiv).appendChild(img);
+    let img1 = document.createElement("img");
+    img1.src = lab4Info.google_link_html;
+    img1.style.width = "1000px";
+    img1.style.objectFit = "scale-down";
+
+    placeOut.appendChild(contentDiv);
+
+    contentDiv.appendChild(funcUsingLink);
+    contentDiv.appendChild(img);
+    contentDiv.appendChild(img1);
+}
+
+function showEvenListener() {
+    clearContentFromPlaceOut();
+
+    let contentDiv = document.createElement("div");
+    contentDiv.style.paddingTop = "20px";
+    contentDiv.style.paddingBottom = "10px";
+    contentDiv.style.maxHeight = "850px";
+    contentDiv.style.overflowX = "auto";
+    contentDiv.style.overflowY = "auto";
+
+    let funcUsingLink = document.createElement("a");
+    funcUsingLink.innerHTML = "[сторінка з функціональними застосуванням]";
+    funcUsingLink.href = lab4Info.git_pages_link_func_using;
+    funcUsingLink.classList.add("git-link-appearance");
+
+    let img1 = document.createElement("img");
+    img1.src = lab4Info.advice;
+    img1.style.width = "1000px";
+    img1.style.objectFit = "scale-down";
+
+    let img2 = document.createElement("img");
+    img2.src = lab4Info.advice_alert;
+    img2.style.width = "1000px";
+    img2.style.objectFit = "scale-down";
+
+    let img3 = document.createElement("img");
+    img3.src = lab4Info.advice_html;
+    img3.style.width = "1000px";
+    img3.style.objectFit = "scale-down";
+
+    placeOut.appendChild(contentDiv);
+
+    contentDiv.appendChild(funcUsingLink);
+    contentDiv.appendChild(img1);
+    contentDiv.appendChild(img2);
+    contentDiv.appendChild(img3);
+}
+
+function showEntity() {
+    clearContentFromPlaceOut();
+
+    let contentDiv = document.createElement("div");
+    contentDiv.style.paddingTop = "20px";
+    contentDiv.style.paddingBottom = "10px";
+    contentDiv.style.maxHeight = "850px";
+    contentDiv.style.overflowX = "auto";
+    contentDiv.style.overflowY = "auto";
+
+    let funcUsingLink = document.createElement("a");
+    funcUsingLink.innerHTML = "[сторінка з функціональними застосуванням]";
+    funcUsingLink.href = lab4Info.git_pages_link_func_using;
+    funcUsingLink.classList.add("git-link-appearance");
+
+    let img3 = document.createElement("img");
+    img3.src = lab4Info.secret;
+    img3.style.width = "1000px";
+    img3.style.objectFit = "scale-down";
+
+    let img4 = document.createElement("img");
+    img4.src = lab4Info.secret_alert;
+    img4.style.width = "1000px";
+    img4.style.objectFit = "scale-down";
+
+    let img5 = document.createElement("img");
+    img5.src = lab4Info.secret_html;
+    img5.style.width = "1000px";
+    img5.style.objectFit = "scale-down";
+
+    placeOut.appendChild(contentDiv);
+
+    contentDiv.appendChild(funcUsingLink);
+    contentDiv.appendChild(img3);
+    contentDiv.appendChild(img4);
+    contentDiv.appendChild(img5);
+}
+
+function showScript() {
+    clearContentFromPlaceOut();
+
+    let contentDiv = document.createElement("div");
+    contentDiv.style.paddingTop = "20px";
+    contentDiv.style.paddingBottom = "10px";
+    contentDiv.style.maxHeight = "850px";
+    contentDiv.style.overflowX = "auto";
+    contentDiv.style.overflowY = "auto";
+
+    let funcUsingLink = document.createElement("a");
+    funcUsingLink.innerHTML = "[сторінка з функціональними застосуванням]";
+    funcUsingLink.href = lab4Info.git_pages_link_func_using;
+    funcUsingLink.classList.add("git-link-appearance");
+
+    let img5 = document.createElement("img");
+    img5.src = lab4Info.insertion;
+    img5.style.width = "1000px";
+    img5.style.objectFit = "scale-down";
+
+    let img6 = document.createElement("img");
+    img6.src = lab4Info.insertion_code;
+    img6.style.width = "1000px";
+    img6.style.objectFit = "scale-down";
+
+    placeOut.appendChild(contentDiv);
+
+    contentDiv.appendChild(funcUsingLink);
+    contentDiv.appendChild(img5);
+    contentDiv.appendChild(img6);
 }
 
 export function showArrays() {

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Functional Using</title>
+</head>
+<body>
+
+<a style="margin-top: 30px;" href="JavaScript:window.open('https://google.com')">GOOGLE</a>
+
+<div style="margin-top: 30px;">
+    <input type="button" value="Отримати пораду 👇" onclick="alert('Посміхнись😁')">
+</div>
+
+<div style="margin-top: 30px;">
+    <input type="text" onchange="alert('[' + this.value + '] ЦЕ ТЕ, ЩО ТИ ВВІВ 😱')">
+    <input type="button" value="Дізнатись таємницю">
+</div>
+
+<p>Вставлено з JS файлу: <span id="insertion"></span></p>
+
+<script>
+    let insertion = document.getElementById('insertion');
+    insertion.innerText = "використана вставка контенту в елемент span з JS скріпту і доданий стиль";
+    insertion.style.color = "lightseagreen";
+</script>
+
+</body>
+</html>
